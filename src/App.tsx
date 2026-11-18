@@ -3,7 +3,7 @@ import { Activity, Dumbbell, ChartNoAxesColumnIncreasing, UserRound, Play, Pause
 import { exerciseCatalog, type MuscleGroup } from './exercises';
 type Tab='Treino'|'Exercícios'|'Progresso'|'Perfil';
 const plans=[{name:'Treino A · Peito e tríceps',desc:'4 exercícios · 45 min',items:['Supino reto com barra','Supino inclinado com halteres','Crucifixo reto','Tríceps pulley com corda']},{name:'Treino B · Costas e bíceps',desc:'4 exercícios · 45 min',items:['Puxada frontal aberta','Remada baixa sentada','Rosca direta com barra','Rosca martelo']},{name:'Treino C · Pernas e abdômen',desc:'5 exercícios · 50 min',items:['Agachamento livre','Leg press 45 graus','Cadeira extensora','Mesa flexora','Prancha frontal']}];
-const groups:('Todos'|MuscleGroup[]) = ['Todos','Peito','Costas','Ombros','Bíceps','Tríceps','Pernas','Glúteos','Panturrilhas','Abdômen','Cardio','Mobilidade'];
+const groups:Array<'Todos'|MuscleGroup> = ['Todos','Peito','Costas','Ombros','Bíceps','Tríceps','Pernas','Glúteos','Panturrilhas','Abdômen','Cardio','Mobilidade'];
 export default function App(){
  const [tab,setTab]=useState<Tab>('Treino');const [plan,setPlan]=useState(0);
  const [done,setDone]=useState<string[]>(()=>JSON.parse(localStorage.getItem('if-done')||'[]'));
