@@ -1,0 +1,1 @@
+import type { CapacitorConfig } from '@capacitor/cli'; const config: CapacitorConfig = { appId: 'com.ironflow.app', appName: 'IronFlow', webDir: 'dist' }; export default config;
